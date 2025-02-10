@@ -845,6 +845,115 @@ namespace grove {
     }
 
 
+  /**
+     * Send data to Thingsboard
+     */
+    //% block="Send Data to your Thingsboard Server|Server %Serveradresse|Server_Port %Port|Token %AccessToken|Daten_1 %Daten1||Daten_2 %Daten2|Daten_3 %Daten3|Daten_4 %Daten4|Daten_5 %Daten5|Daten_6 %Daten6|Daten_7 %Daten7|Daten_8 %Daten8"
+    //% group="UartWiFi"
+    //% expandableArgumentMode="enabled"
+    //% Serveradresse.defl="paminasogo.ddns.net"
+    //% Port.defl="9090"
+    //% AccessToken.defl="API Token(Thingsboard)"
+    
+    export function sendToThingsboard(Serveradresse: string, Port: string, AccessToken: string, Daten1: number = 0, Daten2: number = 0, Daten3: number = 0, Daten4: number = 0, Daten5: number = 0, Daten6: number = 0, Daten7: number = 0, Daten8: number = 0) {
+        let result = 0
+        let retry = 2
+        let data = {
+                    "Daten1": Daten1,
+                    "Daten2": Daten2,
+                    "Daten3": Daten3,
+                    "Daten4": Daten4,
+                    "Daten5": Daten5,
+                    "Daten6": Daten6,
+                    "Daten7": Daten7,
+                    "Daten8": Daten8
+                    }
+       /* let data = {}
+        if (!isNaN(Daten1)) data = {
+                    "Daten1": Daten1}
+        if (!isNaN(Daten2)) data = {
+                    "Daten1": Daten1,
+                    "Daten2": Daten2}
+        if (!isNaN(Daten3)) data = {
+                    "Daten1": Daten1,
+                    "Daten2": Daten2,
+                    "Daten3": Daten3}
+        if (!isNaN(Daten4)) data = {
+                    "Daten1": Daten1,
+                    "Daten2": Daten2,
+                    "Daten3": Daten3,
+                    "Daten4": Daten4}
+        if (!isNaN(Daten5)) data = {
+                    "Daten1": Daten1,
+                    "Daten2": Daten2,
+                    "Daten3": Daten3,
+                    "Daten4": Daten4,
+                    "Daten5": Daten5}
+        if (!isNaN(Daten6)) data = {
+                    "Daten1": Daten1,
+                    "Daten2": Daten2,
+                    "Daten3": Daten3,
+                    "Daten4": Daten4,
+                    "Daten5": Daten5,
+                    "Daten6": Daten6}
+        if (!isNaN(Daten7)) data = {
+                    "Daten1": Daten1,
+                    "Daten2": Daten2,
+                    "Daten3": Daten3,
+                    "Daten4": Daten4,
+                    "Daten5": Daten5,
+                    "Daten6": Daten6,
+                    "Daten7": Daten7}
+        if (!isNaN(Daten8)) data = {
+                    "Daten1": Daten1,
+                    "Daten2": Daten2,
+                    "Daten3": Daten3,
+                    "Daten4": Daten4,
+                    "Daten5": Daten5,
+                    "Daten6": Daten6,
+                    "Daten7": Daten7,
+                    "Daten8": Daten8
+                    }*/
+
+        // close the previous TCP connection
+        if (isWifiConnected) {
+            sendAtCmd("AT+CIPCLOSE")
+            waitAtResponse("OK", "ERROR", "None", 200) //vorher 2000
+        }
+
+        const payload = JSON.stringify(data);
+        const request = `POST /api/v1/${AccessToken}/telemetry HTTP/1.1\r\n` +
+        `Host: ${Serveradresse}\r\n` +
+        `Content-Type: application/json\r\n` +
+        `Content-Length: ${payload.length}\r\n\r\n` +
+        `${payload}`;
+
+        while (isWifiConnected && retry > 0) {
+            retry = retry - 1;
+
+        sendAtCmd(`AT+CIPSTART="TCP","${Serveradresse}",${Port}\r\n`);
+        result = waitAtResponse("OK", "ALREADY CONNECTED", "ERROR", 200) //vorher 2000
+            if (result == 3) continue
+        
+        sendAtCmd(`AT+CIPSEND=${request.length}\r\n`);
+        result = waitAtResponse(">", "OK", "ERROR", 200) //vorher 2000
+            if (result == 3) continue
+        
+        sendAtCmd(request);
+        result = waitAtResponse("SEND OK", "SEND FAIL", "ERROR", 200) //vorher 5000
+            if (result == 1) break
+          
+        // close the previous TCP connection
+        if (isWifiConnected) {
+            sendAtCmd("AT+CIPCLOSE")
+            waitAtResponse("OK", "ERROR", "None", 200) //vorher 2000
+        }
+
+             
+        }
+    }
+
+    
     function waitAtResponse(target1: string, target2: string, target3: string, timeout: number) {
         let buffer = ""
         let start = input.runningTime()
