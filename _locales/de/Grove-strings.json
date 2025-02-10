@@ -38,5 +38,6 @@
     "GroveJoystickKey.LR|block": "Unten rechts",
     "GroveJoystickKey.Press|block": "Gedrückt",
     "grove.onJoystick|block": "wenn Grove - Joystickrichtung|%key an|%xpin|und|%ypin",
-    "grove.getJoystick|block": "lies Joystickrichtung an|%xpin|und|%ypin"
+    "grove.getJoystick|block": "lies Joystickrichtung an|%xpin|und|%ypin",
+    "grove.sendToThingsboard|block": "Send Data to your Thingsboard Server|Serveradresse %Server|Port %Port|AccessToken %Token|Daten1 %Daten1|Daten2 %Daten2|Daten3 %Daten3|Daten4 %Daten4|Daten5 %Daten5|Daten6 %Daten6|Daten7 %Daten7|Daten8 %Daten8"
 }
