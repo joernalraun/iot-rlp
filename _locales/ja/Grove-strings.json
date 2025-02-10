@@ -24,5 +24,5 @@
   "grove.aht20ReadTemperatureC|block": "[Grove - 温湿度センサー]|温度（℃）を読み取る",
   "grove.aht20ReadTemperatureF|block": "[Grove - 温湿度センサー]|温度（℉）を読み取る",
   "grove.aht20ReadHumidity|block": "[Grove - 温湿度センサー]|湿度を読み取る",
-   "grove.sendToThingsboard|block": "Send Data to your Thingsboard Server|Serveradresse %Server|Port %Port|AccessToken %Token|Daten1 %Daten1|Daten2 %Daten2|Daten3 %Daten3|Daten4 %Daten4|Daten5 %Daten5|Daten6 %Daten6|Daten7 %Daten7|Daten8 %Daten8"
+  "grove.sendToThingsboard|block": "Send Data to your Thingsboard Server|Serveradresse %Server|Port %Port|AccessToken %Token|Daten1 %Daten1|Daten2 %Daten2|Daten3 %Daten3|Daten4 %Daten4|Daten5 %Daten5|Daten6 %Daten6|Daten7 %Daten7|Daten8 %Daten8"
 }
