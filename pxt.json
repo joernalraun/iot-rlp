@@ -1,7 +1,7 @@
 {
     "name": "Thingsboard_AHT20_Grove",
     "version": "0.1.3",
-    "description": "A PL Grove Thingsboard Package",
+    "description": "A PL Grove AHT20 Thingsboard Package",
     "license": "MIT",
     "dependencies": {
         "core": "*"
