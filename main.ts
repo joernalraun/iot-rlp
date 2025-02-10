@@ -855,7 +855,7 @@ namespace grove {
     //% Port.defl="9090"
     //% AccessToken.defl="API Token(Thingsboard)"
     
-    export function sendToThingsboard(Serveradresse: string, Port: string, AccessToken: string, Daten1: number = 0, Daten2: number = 0, Daten3: number = 0, Daten4: number = 0, Daten5: number = 0, Daten6: number = 0, Daten7: number = 0, Daten8: number = 0) {
+    export function sendToThingsboard(Serveradresse: string, Port: string, AccessToken: string, Daten1: number, Daten2: number, Daten3: number, Daten4: number, Daten5: number, Daten6: number, Daten7: number, Daten8: number) {
         let result = 0
         let retry = 2
         let data = {
