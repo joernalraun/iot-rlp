@@ -867,6 +867,19 @@ namespace grove {
                     "Daten6": Daten6,
                     "Daten7": Daten7,
         }
+        function roundValues(data) {
+          let newData = {};
+          for (let key in data) {
+            if (typeof data[key] === 'number') {
+              newData[key] = parseFloat(data[key].toFixed(2)); // Rundet auf 2 Dezimalstellen
+          } else {
+              newData[key] = data[key];
+                 }
+          }
+          return newData;
+          }
+
+        data = roundValues(data);
        /* let data = {}
         if (!isNaN(Daten1)) data = {
                     "Daten1": Daten1}
