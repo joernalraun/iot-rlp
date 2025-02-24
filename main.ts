@@ -866,21 +866,7 @@ namespace grove {
                     "Daten5": Daten5,
                     "Daten6": Daten6,
                     "Daten7": Daten7,
-                    "Daten8": Daten8,
-        // ...
-  "toJSON": function() {
-    let newData = {};
-    for (let key in this) {
-      if (typeof this[key] === 'number') {
-        newData[key] = parseFloat(this[key].toFixed(2)); // Rundet auf 2 Dezimalstellen
-      } else {
-        newData[key] = this[key];
-      }
-    }
-    return newData;
-  }            
-        
-        };
+        }
        /* let data = {}
         if (!isNaN(Daten1)) data = {
                     "Daten1": Daten1}
