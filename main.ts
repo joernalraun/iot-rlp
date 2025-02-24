@@ -869,9 +869,10 @@ namespace grove {
         }
         for (let key in data) {
           if (typeof data[key] === 'number') {
-            data[key] = parseFloat(data[key].toFixed(2));
+          let num = data[key] as number; // Weise explizit den `number` Typ zu
+          data[key] = parseFloat(num.toFixed(2));
                                               }
-                              }
+                              }            
        /* let data = {}
         if (!isNaN(Daten1)) data = {
                     "Daten1": Daten1}
