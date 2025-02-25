@@ -867,12 +867,7 @@ namespace grove {
                     "Daten6": Daten6,
                     "Daten7": Daten7,
         }
-        for (let key in data) {
-  if (typeof data[key] === 'number') {
-    let num = new Number(data[key]); // Konvertiere zu einem `Number`-Objekt
-    data[key] = parseFloat(num.toFixed(2));
-  }
-}
+        
        /* let data = {}
         if (!isNaN(Daten1)) data = {
                     "Daten1": Daten1}
