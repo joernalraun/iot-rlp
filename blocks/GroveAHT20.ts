@@ -35,7 +35,9 @@ namespace grove
         const val = Read(aht20);
         if (val == null) return null;
 
-        return val.Temperature;
+        //return val.Temperature;
+        let temperatureC = new Number(val.Temperature);
+        return parseFloat(temperatureC.toFixed(2));
     }
 
     /**
@@ -50,7 +52,9 @@ namespace grove
         const val = Read(aht20);
         if (val == null) return null;
 
-        return val.Temperature * 9 / 5 + 32;
+       // return val.Temperature * 9 / 5 + 32;
+        let temperatureF = new Number(val.Temperature * 9 / 5 + 32);
+        return parseFloat(temperatureF.toFixed(2));
     }
 
     /**
@@ -65,7 +69,9 @@ namespace grove
         const val = Read(aht20);
         if (val == null) return null;
 
-        return val.Humidity;
+        //return val.Humidity;
+         let humidity = new Number(val.Humidity);
+         return parseFloat(humidity.toFixed(2));
     }
 
 }
