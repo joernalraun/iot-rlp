@@ -866,6 +866,7 @@ namespace grove {
                     "Daten5": Daten5,
                     "Daten6": Daten6,
                     "Daten7": Daten7,
+                    "Daten8": Daten8
          }
         
        /* let data = {}
