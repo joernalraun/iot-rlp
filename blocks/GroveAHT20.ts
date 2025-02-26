@@ -37,7 +37,7 @@ namespace grove
 
         //return val.Temperature;
         let temperatureC = parseFloat(val.Temperature); // Konvertiert den String in eine Zahl
-        let temperatureC = tempertureC.toFixed(2);
+       // let temperatureC = temperatureC.toFixed(2);
         
     return temperatureC;
     }
@@ -56,7 +56,7 @@ namespace grove
 
        // return val.Temperature * 9 / 5 + 32;
         let temperatureF = parseFloat(val.Temperature); // Konvertiert den String in eine Zahl
-        let temperatureF = temperatureF.toFixed(2);
+       // let temperatureF = temperatureF.toFixed(2);
     return temperatureF * 9 / 5 + 32;
     }
 
@@ -74,7 +74,7 @@ namespace grove
 
         //return val.Humidity;
           let humidity = parseFloat(val.Humidity); // Konvertiert den String in eine Zahl
-          let humidity = humidity.toFixed(2);
+        //  let humidity = humidity.toFixed(2);
     return humidity;
     }
 
