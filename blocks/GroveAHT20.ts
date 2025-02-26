@@ -36,7 +36,9 @@ namespace grove
         if (val == null) return null;
 
         //return val.Temperature;
-        let temperatureC = val.Temperature.toFixed(2);
+        let temperatureC = parseFloat(val.Temperature); // Konvertiert den String in eine Zahl
+        let temperatureC = tempertureC.toFixed(2);
+        
     return temperatureC;
     }
 
@@ -53,7 +55,8 @@ namespace grove
         if (val == null) return null;
 
        // return val.Temperature * 9 / 5 + 32;
-        let temperatureF = val.Temperature.toFixed(2);
+        let temperatureF = parseFloat(val.Temperature); // Konvertiert den String in eine Zahl
+        let temperatureF = temperatureF.toFixed(2);
     return temperatureF * 9 / 5 + 32;
     }
 
@@ -70,7 +73,8 @@ namespace grove
         if (val == null) return null;
 
         //return val.Humidity;
-          let humidity = val.Humidity.toFixed(2);
+          let humidity = parseFloat(val.Humidity); // Konvertiert den String in eine Zahl
+          let humidity = humidity.toFixed(2);
     return humidity;
     }
 
