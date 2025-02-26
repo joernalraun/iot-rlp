@@ -35,11 +35,8 @@ namespace grove
         const val = Read(aht20);
         if (val == null) return null;
 
-        //return val.Temperature;
-        let temperatureC = Number(val.Temperature); // Konvertiert Number Object to Number primitive
-       // let temperatureC = temperatureC.toFixed(2);
-        
-    return temperatureC;
+       return val.Temperature;
+       
     }
 
     /**
@@ -54,10 +51,8 @@ namespace grove
         const val = Read(aht20);
         if (val == null) return null;
 
-       // return val.Temperature * 9 / 5 + 32;
-        let temperatureF = Number(val.Temperature); /// Konvertiert Number Object to Number primitive
-       // let temperatureF = temperatureF.toFixed(2);
-    return temperatureF * 9 / 5 + 32;
+       return val.Temperature * 9 / 5 + 32;
+       
     }
 
     /**
@@ -72,10 +67,8 @@ namespace grove
         const val = Read(aht20);
         if (val == null) return null;
 
-        //return val.Humidity;
-          let humidity = Number(val.Humidity); // Konvertiert Number Object to Number primitive
-        //  let humidity = humidity.toFixed(2);
-    return humidity;
+       return val.Humidity;
+       
     }
 
 }
