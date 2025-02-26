@@ -36,7 +36,7 @@ namespace grove
         if (val == null) return null;
 
         //return val.Temperature;
-        let temperatureC = Number(val.Temperature.toFixed(2));
+        let temperatureC = val.Temperature.toFixed(2);
     return temperatureC;
     }
 
@@ -53,7 +53,7 @@ namespace grove
         if (val == null) return null;
 
        // return val.Temperature * 9 / 5 + 32;
-        let temperatureF = Number((val.Temperature * 9 / 5 + 32).toFixed(2));
+        let temperatureF = val.Temperature * 9 / 5 + 32.toFixed(2);
     return temperatureF;
     }
 
@@ -70,7 +70,7 @@ namespace grove
         if (val == null) return null;
 
         //return val.Humidity;
-          let humidity = Number(val.Humidity.toFixed(2));
+          let humidity = val.Humidity.toFixed(2);
     return humidity;
     }
 
