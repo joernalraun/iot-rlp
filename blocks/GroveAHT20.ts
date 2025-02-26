@@ -53,8 +53,8 @@ namespace grove
         if (val == null) return null;
 
        // return val.Temperature * 9 / 5 + 32;
-        let temperatureF = val.(Temperature * 9 / 5 + 32).toFixed(2);
-    return temperatureF;
+        let temperatureF = val.Temperature.toFixed(2);
+    return temperatureF * 9 / 5 + 32;
     }
 
     /**
