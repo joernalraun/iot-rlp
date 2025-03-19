@@ -87,7 +87,7 @@ enum GroveJoystickKey {
 /**
  * Functions to operate Grove module.
  */
-//% weight=10 color=#9F79EE icon="\uf1b3" block="IoTRLP"
+//% weight=10 color=#9F79EE icon="\uf1b3" block="IoT-RLP"
 //% groups='["4-Digit","Ultrasonic","Gesture","Thumbjoystick","UartWiFi"]'
 namespace grove {
     /**
