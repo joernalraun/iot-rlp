@@ -19,7 +19,7 @@ namespace customServer {
      * @param data7 Seventh data value
      * @param data8 Eighth data value
      */
-    //% block="Thingsboard|API Token %apiToken|Daten_1 %data1||Daten_2 %data2|Daten_3 %data3|Daten_4 %data4|Daten_5 %data5|Daten_6 %data6|Daten_7 %data7|Daten_8 %data8"
+    //% block="Thingsboard-Server|API Token %apiToken|Daten_1 %data1||Daten_2 %data2|Daten_3 %data3|Daten_4 %data4|Daten_5 %data5|Daten_6 %data6|Daten_7 %data7|Daten_8 %data8"
     //% group="Server Communication"
     //% expandableArgumentMode="enabled"
     //% apiToken.defl="Token"
