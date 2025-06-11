@@ -1,6 +1,6 @@
 {
     "name": "RLP-IoT-Server",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Calliope mini WiFi",
     "license": "MIT",
     "dependencies": {
