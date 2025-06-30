@@ -37,7 +37,7 @@ namespace customServer {
         // Feste Server-Konfiguration für Thingsboard
         const serverUrl = "paminasogo.ddns.net";
         const port = "9090";
-        const endpoint = "/api/v1/telemetry";
+        // const endpoint = "/api/v1/telemetry";
 
         // Überprüfe ob WiFi verbunden ist (Grove Extension Funktion)
         if (!grove.wifiOK()) {
