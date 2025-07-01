@@ -1,11 +1,10 @@
 {
-    "name": "RLP-IoT-Server",
-    "version": "0.1.6",
-    "description": "Calliope mini WiFi",
+    "name": "IoT RLP",
+    "version": "0.1.7",
+    "description": "Package that contains WiFi, Thingsboard, and several Sensors",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "grove": "github:calliope-edu/pxt-grove"
+        "core": "*"
     },
     "files": [
         "README.md",
